@@ -16,7 +16,11 @@ class App extends Component<AppProps, AppState> {
     this.state = {
       name: 'React'
     };
-  }l
+  }
+
+  setUpdate = () => {
+    this.setState({name:'react-xxx'})
+  }
 
   render() {
     return (
@@ -24,7 +28,7 @@ class App extends Component<AppProps, AppState> {
         <Hello name={this.state.name} />
         <div className="a">
           aaaa
-          <div className="b">bbbbb</div>
+          <div className="b" onClick={this.setUpdate}>bbbbb</div>
         </div>
         <p>
           Start editing to see some magic happen :)
